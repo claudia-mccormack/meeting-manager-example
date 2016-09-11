@@ -2,7 +2,7 @@
 <p>
   Tags:
   <% @meeting.tags.each do |tag| %>
-    <a href="/meetings?tag=<%= tag.name %>"><%= tag.name %></a>  
+    <a href="/meetings?tag=<%= tag.name %>"><%= tag.name %></a>
   <% end %>
 </p>
 <p>Address: <%= @meeting.address %></p>
@@ -10,4 +10,5 @@
 <p>End time: <%= @meeting.end_time %></p>
 <h4>Notes:</h4>
 <p><%= @meeting.notes %></p>
+<%= link_to "Update Meeting", "/meetings/#{@meeting.id}/edit" %>
 <a href="/meetings">Back to all meetings</a>
